@@ -1,0 +1,235 @@
+/*メニュー部分*/
+#ham-menu {
+    background-color: #fff; /*メニュー背景色*/
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px 40px; /*メニュー内部上下左右余白*/
+    position: fixed;
+    right: -300px; /*メニュー横幅①と合わせる*/
+    top: 0;
+    transition: transform 0.3s linear 0s; /*0.3s は変化するのにかかる時間*/
+    width: 300px; /*メニュー横幅①*/
+    z-index: 1000;
+}
+
+/*メニューアイコン部分は疑似要素で*/
+#ham-menu::before {
+    background-color: #fff; /*ボタン部分背景色*/
+    border-radius: 0 0 0 10px; /*左下角丸*/
+    color: #333; /*アイコン（フォント）色*/
+    content: "≡"; /*メニューアイコン*/
+    display: block;
+    font-size: 100px; /*アイコン（フォント）サイズ*/
+    height: 80px;
+    line-height: 80px; /*縦位置中央化*/
+    position: absolute;
+    right: 100%;
+    text-align: center;
+    top: 0;
+    width: 50px;
+    padding-right: 30px;
+}
+
+/*透過背景部分*/
+#menu-background {
+    background-color: #333; /*黒背景部分背景色*/
+    display: block;
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all 0.3s linear 0s; /*0.3s は変化するのにかかる時間*/
+    width: 100%;
+    z-index: -1;
+}
+
+/*hover 時の処理*/
+#ham-menu:hover {
+    transform: translate(-300px); /*メニュー横幅①と合わせる*/
+}
+
+/*メニューバー　デザイン*/
+ul{
+	list-style: none;
+}
+
+li{
+	font-size: 1.5em;
+	margin-top: 50px;
+}
+
+li a{
+	color: #000;
+	text-decoration: none;
+	margin-top: 50px;
+	-webkit-transition: 2s;
+	-moz-transition: 2s;
+	-o-transition: 2s;
+	-ms-transition: 2s;
+	transition: 2s;
+	padding: 10px 20px 10px 20px;
+	margin-left: -20px;
+}
+/*マウスがメニューにのった時のデザイン*/
+li a:hover{
+	background-color: lightskyblue;
+	color: white;
+}
+
+
+
+#ham-menu:hover + #menu-background {
+    opacity: 0.5; /*黒背景部分透過度*/
+    z-index: 999;
+}
+
+body{
+	width: 50%;
+	margin-left: 10%;
+}
+
+/*トップ画像　デザイン等*/
+.images-top{
+	margin-left: -110px;
+	margin-top: -20px;
+}
+
+/*ストーリー　デザイン等*/
+.img-story{
+	opacity: 0.5;
+	margin-top: -5px;
+	margin-left: -180px;
+}
+
+.story-titole{
+	font-size: 2.0em;
+}
+
+.story-text{
+	margin-top: -800px;
+	font-size: 1.5em;
+}
+
+
+/*キャスト　デザイン等*/
+.cast{
+	margin-top: 250px;
+}
+
+img-cast{
+	border-radius: 50%;
+}
+
+.cast-title{
+	text-align: center;
+	margin-left: 50%;
+}
+
+.cast-text2{
+	width: 300px;
+}
+
+.akari{
+	float: right;
+	margin-top: -510px;
+}
+
+.syota{
+	float: right;
+	margin-top: -510px;
+	margin-right: -380px;
+
+}
+
+.kouhei{
+	margin-top: 80px;
+}
+
+.nanami{
+	float: right;
+	margin-top: -425px;
+}
+
+.kokone{
+	float: right;
+	margin-right: -380px;
+	margin-top: -430px;
+}
+
+.mariko{
+	margin-top: 100px;
+}
+
+.shiniti{
+	float: right;
+	margin-top: -430px;
+}
+
+.mirei{
+	float: right;
+	margin-right: -675px;
+	margin-top: -430px;
+}
+
+/*商品情報　デザイン等*/
+
+.info{
+	margin-top: 100px;
+}
+
+.DVD{
+	float: right;
+	margin-right: -400px;
+	margin-top: -445px;
+}
+
+
+/*主題歌　デザイン等*/
+.img-song{
+	opacity: 0.4;
+}
+
+.song-title{
+	text-align: center;
+	margin-left: 50%;
+}
+
+.text{
+	margin-top: -1130px;
+}
+
+.song-text{
+	font-size: 1.4em;
+	margin-left: 15px;
+	width: 85%;
+}
+
+.song{
+	margin-top: 100px;
+}
+
+/*ストーリー　キャスト　商品情報　主題歌　共通デザイン*/
+h2{
+	text-align: center;
+	font-size: 2.5em;
+}
+
+h3{
+	font-size: 1.7em;
+	text-align: center;
+}
+
+/*フロート解除*/
+.clear{
+	clear: none;
+}
+
+/*フッター　デザイン*/
+footer{
+	width: 500px;
+	background-color:rgba(188,188,188,1.00);
+	padding-right: 830px;
+	margin-left: -130px;
+	margin-top: -9px;
+}
